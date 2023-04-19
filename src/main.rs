@@ -9,10 +9,19 @@ fn loop_cons() { // function to implment a 'loop' looping struture
     } 
   }
 }
+fn while_cons() { // function to implement a while loop
+  print!("\nPrinting 3 iterations using a 'while' looping structure.\n"); // printing title message
+  let mut incrementor = 0;  // declaring a incrementor to keep track of iterations
+  while incrementor < 3 { // while incrementor is less than 4
+    println!("iteration {}", incrementor + 1); // keep printing this
+    incrementor += 1; // increment the incrementor each 
+  }
+}
 
 fn main() { // defining the main function
   loop_cons(); // calling function to implement loop construct
+  while_cons(); // calling while function to implement a while loop
 }
 
 
-// this is a test comment
+
