@@ -18,9 +18,18 @@ fn while_cons() { // function to implement a while loop
   }
 }
 
+fn for_cons() { // function to implement a for loop
+  print!("\nPrinting 3 iterations using a 'for' looping structure.\n");
+  let iterations = [1, 2, 3]; // creating an array of numbers to iterate over 
+  for iteration in iterations.iter() { // for loop using .iter() function to iterate
+    println!("iteration {}", iteration); // printing display message at each iteration 
+  }
+}
+
 fn main() { // defining the main function
   loop_cons(); // calling function to implement loop construct
   while_cons(); // calling while function to implement a while loop
+  for_cons() // calling for function to implement for loop
 }
 
 
