@@ -41,12 +41,27 @@ fn while_let_cons() { // defining a function to implement a while let loop
   }
 }
 
+fn signed_int_data_types() { // creating function that declares, assignes, and prints all signed int data types
+  print!("\nPrinting the minimum values of all 5 signed integer data types\n");
+  // declarations
+  let (a, b, c, d, e): (i8, i16, i32, i64, i128); // 8, 16, 32, 64, 128 bit signed integers
+  // assgignments
+  (a, b, c, d, e) = (-128, -32768, -2147483648, -9223372036854775808, -170141183460469231731687303715884105728);
+  // printing
+  println!("8-bit   = {}\n16-bit  = {}\n32-bit  = {}\n64-bit  = {}\n128-bit = {}", a, b, c, d, e);
+}
+
+fn unsigned_int_data_types() { // creating a function that declares, assigns, and prints all unsignged data types
+  print!("\nPrinting the maximum values of all unsigned integer data types")
+}
+
 fn main() { // defining the main function
   loop_cons(); // calling function to implement loop construct
   while_cons(); // calling while function to implement a while loop
   for_cons(); // calling for function to implement for loop
   for_in_cons(); // calling the for in function to implment a for in loop 
   while_let_cons(); // calling the while let function to implement a while let looping structure
+  signed_int_data_types(); // calling the data types functions to print all data types 
 }
 
 
