@@ -19,17 +19,34 @@ fn while_cons() { // function to implement a while loop
 }
 
 fn for_cons() { // function to implement a for loop
-  print!("\nPrinting 3 iterations using a 'for' looping structure.\n");
+  print!("\nPrinting 3 iterations using a 'for' looping structure.\n"); // printing title message
   let iterations = [1, 2, 3]; // creating an array of numbers to iterate over 
   for iteration in iterations.iter() { // for loop using .iter() function to iterate
     println!("iteration {}", iteration); // printing display message at each iteration 
   }
 }
 
+fn for_in_cons() { // defining a function to implement a for in loop
+  println!("\nPrinting 3 iterations usign a 'for in' looping structure."); // printing title message 
+  for number in 1..4 { // creating a for in loop specifying i want to iterate 3 times
+    println!("iteration {}", number); // loop body to print message and iteration number 
+  }
+}
+
+fn while_let_cons() { // defining a function to implement a while let loop 
+  print!("\nPrinting 3 iterations using a 'while let' looping structure\n");
+  let mut iterations = vec![1, 2, 3].into_iter(); // creating an iterator to iterate over a mutable vector 
+  while let Some(iteration) = iterations.next() { // creating the while let to iterate over and extract from iterations
+    println!("iteration {}", iteration); // displaying each extracted iteration
+  }
+}
+
 fn main() { // defining the main function
   loop_cons(); // calling function to implement loop construct
   while_cons(); // calling while function to implement a while loop
-  for_cons() // calling for function to implement for loop
+  for_cons(); // calling for function to implement for loop
+  for_in_cons(); // calling the for in function to implment a for in loop 
+  while_let_cons(); // calling the while let function to implement a while let looping structure
 }
 
 
